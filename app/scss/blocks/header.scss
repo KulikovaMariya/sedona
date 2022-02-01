@@ -230,9 +230,12 @@
 
   &__text-pic {
     margin: 61px auto 99px;
-    max-width: 282px;
+    width: 282px;
+    height: 209px;
     @include tablet {
-      max-width: 461px;
+      margin: 78px auto 91px;
+      width: 461px;
+      height: 350px;
     }
   }
 }
