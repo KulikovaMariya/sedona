@@ -4,6 +4,10 @@
   position: relative;
   background: url('./../../img/back-mobile.jpg') center 56px/cover no-repeat;
   overflow: hidden;
+  @include tablet {
+    background: url('./../../img/back-desktop.jpg') center 56px/cover no-repeat;
+    padding: 0;
+  }
 
   &::after {
     content: url("./../../img/right-decor.svg");
@@ -28,6 +32,12 @@
     transform: translateY(-100%);
     pointer-events: none;
     transition: transform .3s ease, opacity .3s ease;
+    @include tablet {
+      opacity: 1;
+      position: static;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
   }
 
   &__nav--active {
@@ -42,13 +52,28 @@
 
   &__nav-list {
     list-style-type: none;
-    background-color: rgba(0, 0, 0);
+    //background-color: rgba(0, 0, 0);
+    @include tablet {
+      display: flex;
+    }
   }
 
   &__nav-item {
     background-color: $blue-primary;
     position: relative;
     box-shadow: 0 1px 0 rgba(1, 1, 1, .2), inset 0 1px 0 rgba(255, 255, 255, .2);
+    @include tablet {
+      width: 20%;
+      //padding: 8px 5px 7px 7px;
+      background-color: $white;
+      box-shadow: none;
+    }
+  }
+
+  &__nav-item:nth-child(2) {
+    @include tablet {
+      margin-right: 20%
+    }
   }
 
   &__nav-item:last-child {
@@ -63,6 +88,9 @@
     left: 0;
     right: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .2) 100%);
+    @include tablet {
+      display: none;
+    }
   }
 
   &__nav-link {
@@ -77,6 +105,12 @@
     text-transform: uppercase;
     color: $white;
     text-align: center;
+    @include tablet {
+      padding: 16px 11px 14px 14px;
+      font-size: 14px;
+      line-height: 26px;
+      color: $black;
+    }
   }
 
   &__logo-link {
@@ -84,6 +118,24 @@
     display: block;
     width: 102px;
     text-decoration: none;
+    @include tablet {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 51px);
+    }
+  }
+
+  &__logo--mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__logo--tablet {
+    display: none;
+    @include tablet {
+      display: inline-block;
+    }
   }
 
   &__burger {
@@ -97,6 +149,9 @@
     position: absolute;
     top: 0;
     right: 0;
+    @include tablet {
+      display: none;
+    }
   }
 
   &__burger-line {
@@ -127,5 +182,8 @@
   &__text-pic {
     margin: 61px auto 99px;
     max-width: 282px;
+    @include tablet {
+      max-width: 461px;
+    }
   }
 }
