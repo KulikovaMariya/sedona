@@ -8,9 +8,13 @@
     background: url('./../../img/back-desktop.jpg') center 56px/cover no-repeat;
     padding: 0;
   }
+  @include desktop {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   &::after {
-    content: url("./../../img/right-decor.svg");
+    content: url("./../../img/right-decor-desktop.svg");
     height: 57px;
     position: absolute;
     bottom: 0;
@@ -18,7 +22,7 @@
   }
 
   &::before {
-    content: url("./../../img/left-decor.svg");
+    content: url("./../../img/left-decor-desktop.svg");
     height: 57px;
     position: absolute;
     bottom: 0;
@@ -55,6 +59,7 @@
     //background-color: rgba(0, 0, 0);
     @include tablet {
       display: flex;
+      background-color: $white;
     }
   }
 
@@ -68,11 +73,17 @@
       background-color: $white;
       box-shadow: none;
     }
+    @include desktop {
+      width: 19.92%;
+    }
   }
 
   &__nav-item:nth-child(2) {
     @include tablet {
       margin-right: 20%
+    }
+    @include desktop {
+      margin-right: 20.33%
     }
   }
 
@@ -111,6 +122,31 @@
       line-height: 26px;
       color: $black;
     }
+
+  }
+
+  &__nav-link:hover {
+    @include desktop {
+      color: $blue-primary;
+    }
+  }
+
+  &__nav-link:active {
+    @include desktop {
+      color: $menu-item-active;
+    }
+  }
+
+  &__nav-link:active:hover {
+    @include desktop {
+      color: $menu-item-active-hover;
+    }
+  }
+
+  &__nav-link:focus {
+    @include desktop {
+      color: $menu-item-focus;
+    }
   }
 
   &__logo-link {
@@ -123,6 +159,9 @@
       top: 0;
       left: calc(50% - 51px);
     }
+    @include desktop {
+      left: calc(50% - 94px);
+    }
   }
 
   &__logo--mobile {
@@ -134,6 +173,16 @@
   &__logo--tablet {
     display: none;
     @include tablet {
+      display: inline-block;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__logo--desktop {
+    display: none;
+    @include desktop {
       display: inline-block;
     }
   }
