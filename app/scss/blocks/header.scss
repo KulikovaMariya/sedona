@@ -2,10 +2,10 @@
   text-align: center;
   padding: 0 17px;
   position: relative;
-  background: url('../../img/back-mobile.jpg') center 56px/cover no-repeat;
+  background: url('../img/back-mobile.jpg') center 56px/cover no-repeat;
   overflow: hidden;
   @include tablet {
-    background: url('../../img/back-desktop.jpg') center 56px/cover no-repeat;
+    background: url('../img/back-desktop.jpg') center 56px/cover no-repeat;
     padding: 0;
   }
   @include desktop {
@@ -14,7 +14,7 @@
   }
 
   &::after {
-    content: url("../../img/right-decor-desktop.svg");
+    content: url("../img/right-decor-desktop.svg");
     height: 57px;
     position: absolute;
     bottom: 0;
@@ -22,7 +22,7 @@
   }
 
   &::before {
-    content: url("../../img/left-decor-desktop.svg");
+    content: url("../img/left-decor-desktop.svg");
     height: 57px;
     position: absolute;
     bottom: 0;
