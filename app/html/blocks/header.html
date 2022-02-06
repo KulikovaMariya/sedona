@@ -1,29 +1,42 @@
 <header class="header">
-  <nav class="header__nav js-nav">
-    <ul class="header__nav-list">
-      <li class="header__nav-item">
-        <a href="#" class="header__nav-link">Главная</a>
-      </li>
-      <li class="header__nav-item">
-        <a href="#" class="header__nav-link">Фотои видео</a>
-      </li>
-      <li class="header__nav-item">
-        <a href="#" class="header__nav-link">Фрма отзыва</a>
-      </li>
-      <li class="header__nav-item">
-        <a href="https://htmlacademy.ru/" class="header__nav-link">HTML Academy</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="header__top">
+    <nav class="header__nav js-nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link _active">Главная</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">Фотои видео</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">Фрма отзыва</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="https://htmlacademy.ru/" class="header__nav-link">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
     <a href="#" class="header__logo-link">
-      <img class="header__logo header__logo--mobile" src="img/icons/logo-mobile.svg" width="102" height="82" alt="Логотип сайта Sedona">
-      <img class="header__logo header__logo--tablet" src="img/icons/logo-tablet.svg" width="102" height="82" alt="Логотип сайта Sedona">
-      <img class="header__logo header__logo--desktop" src="img/icons/logo-desktop.svg" width="187" height="96" alt="Логотип сайта Sedona">
+      <picture>
+        <source media="(min-width: 1024px)" srcset="img/icons/logo-desktop.svg" />
+        <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg" />
+        <img class="header__logo" src="img/icons/logo-mobile.svg" width="102" height="82" alt="Логотип сайта Sedona">
+      </picture>
     </a>
     <button type="button" aria-label="Открыть меню" class="header__burger js-burger">
       <span class="header__burger-line"></span>
       <span class="header__burger-line"></span>
       <span class="header__burger-line"></span>
     </button>
-  <img class="header__text-pic" width="282" height="209" src="img/text-index.svg" alt="текст на картинке: добро пожаловать в величественную Седону">
+  </div>
+  <div class="header__main">
+    <img class="header__text-pic" width="282" height="209" src="img/text-index.svg" alt="текст на картинке: добро пожаловать в величественную Седону">
+  </div>
 </header>
+
+
+<!--<picture>-->
+<!--  <source type="image/avif" srcset="img/back-desktop.avif 1x, img/back-desktop-x2.avif 2x" />-->
+<!--  <source type="image/webp" srcset="img/back-desktop.webp 1x, img/back-desktop-x2.webp 2x" />-->
+<!--  <img srcset="img/back-desktop.jpg 1x, img/back-desktop-2x.jpg 2x" src="img/back-desktop.jpg" width="102" height="82" alt="Логотип сайта Sedona">-->
+<!--</picture>-->

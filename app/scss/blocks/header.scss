@@ -1,33 +1,22 @@
 .header {
   text-align: center;
-  padding: 0 17px;
   position: relative;
-  background: url('../img/back-mobile.jpg') center 56px/cover no-repeat;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
   @include tablet {
-    background: url('../img/back-desktop.jpg') center 56px/cover no-repeat;
     padding: 0;
+
   }
   @include desktop {
     max-width: 1200px;
     margin: 0 auto;
   }
 
-  &::after {
-    content: url("../img/right-decor-desktop.svg");
-    height: 57px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-  }
-
-  &::before {
-    content: url("../img/left-decor-desktop.svg");
-    height: 57px;
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-  }
+  &__top {
+  height: 56px;
+}
 
   &__nav {
     opacity: 0;
@@ -56,25 +45,31 @@
 
   &__nav-list {
     list-style-type: none;
-    //background-color: rgba(0, 0, 0);
     @include tablet {
       display: flex;
-      background-color: $white;
+      background-color: #FFFFFF;
     }
   }
 
   &__nav-item {
-    background-color: $blue-primary;
+    background-color: $mobile-desktop-header-nav-item-bg;
     position: relative;
     box-shadow: 0 1px 0 rgba(1, 1, 1, .2), inset 0 1px 0 rgba(255, 255, 255, .2);
     @include tablet {
       width: 20%;
-      //padding: 8px 5px 7px 7px;
-      background-color: $white;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      background-color: #FFFFFF;
       box-shadow: none;
     }
     @include desktop {
-      width: 19.92%;
+      position: static;
+    }
+
+    &:active {
+      @include mobile {
+        background-color: $mobile-desktop-header-nav-item-active-bg;
+      }
     }
   }
 
@@ -105,7 +100,7 @@
   }
 
   &__nav-link {
-    display: block;
+    display: inline-block;
     padding-top: 10px;
     padding-bottom: 5px;
     text-decoration: none;
@@ -114,42 +109,60 @@
     line-height: 40px;
     font-weight: bold;
     text-transform: uppercase;
-    color: $white;
+    color: #FFFFFF;
     text-align: center;
+    outline: 0;
+    transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+
     @include tablet {
-      padding: 16px 11px 14px 14px;
+      padding: 10px 14px 8px 14px;
       font-size: 14px;
       line-height: 26px;
-      color: $black;
+      color: $desktop-header-nav-link-color;
+    }
+
+    &:focus-visible{
+      box-shadow: inset 0 0 0 2px rgba($mobile-desktop-header-nav-item-bg, .5);
+      border-radius: 6px;
+    }
+
+    &:active {
+      color: $mobile-desktop-header-nav-link-active-color;
     }
 
   }
 
+
   &__nav-link:hover {
     @include desktop {
-      color: $blue-primary;
+      color: $mobile-desktop-header-nav-item-bg;
     }
   }
 
   &__nav-link:active {
     @include desktop {
-      color: $menu-item-active;
+      color: rgba($desktop-header-nav-link-color, .3);
     }
   }
 
-  &__nav-link:active:hover {
+  &__nav-link._active {
     @include desktop {
-      color: $menu-item-active-hover;
-    }
-  }
-
-  &__nav-link:focus {
-    @include desktop {
-      color: $menu-item-focus;
+      color: rgba($desktop-header-nav-link-color, .3);
+      &:hover{
+        color: $desktop-header-nav-link-active-hover-color;
+      }
+      &:active{
+        color: rgba($desktop-header-nav-link-active-hover-color, .3);
+      }
     }
   }
 
   &__logo-link {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 51px);
+    z-index: 2;
+
     margin: 0 auto;
     display: block;
     width: 102px;
@@ -164,26 +177,16 @@
     }
   }
 
-  &__logo--mobile {
+  &__logo {
+    display: inline-block;
+    width: 102px;
+    height: 82px;
     @include tablet {
-      display: none;
-    }
-  }
-
-  &__logo--tablet {
-    display: none;
-    @include tablet {
-      display: inline-block;
+      height: 84px;
     }
     @include desktop {
-      display: none;
-    }
-  }
-
-  &__logo--desktop {
-    display: none;
-    @include desktop {
-      display: inline-block;
+      width: 187px;
+      height: 84px;
     }
   }
 
@@ -206,8 +209,12 @@
   &__burger-line {
     width: 23px;
     height: 4px;
-    background-color: $blue-primary;
+    background-color: $mobile-burger-color;
     transition: transform .3s ease;
+  }
+
+  &__burger:active .header__burger-line {
+    background-color: $mobile-burger-active-color;
   }
 
   &__burger--active {
@@ -215,7 +222,7 @@
   }
 
   &__burger--active .header__burger-line:first-child {
-    background-color: $white;
+    background-color: $mobile-burger-close-color;
     transform: translateY(9px) rotate(45deg);
   }
 
@@ -224,16 +231,55 @@
   }
 
   &__burger--active .header__burger-line:last-child {
-    background-color: $white;
+    background-color:$mobile-burger-close-color;
     transform: translateY(-9px) rotate(-45deg);
   }
 
-  &__text-pic {
-    margin: 61px auto 99px;
-    width: 282px;
-    height: 209px;
+  &__burger--active:active .header__burger-line {
+    background-color:$mobile-burger-close-active-color;
+  }
+
+  &__main {
+    position: relative;
+    padding-top: 81px;
+    padding-bottom: 100px;
+    background-image: image-set(
+        url('../img/back-desktop-1x.jpg') 1x,
+        url('../img/back-desktop-1x.webp') 1x,
+        url('../img/back-desktop-2x.jpg') 2x,
+        url('../img/back-desktop-2x.webp') 2x,
+        url('../img/back-desktop-3x.webp') 3x,
+        url('../img/back-desktop-3x.jpg') 3x
+    );
+
+    background-image: -webkit-image-set(
+        url('../img/back-desktop-1x.jpg') 1x,
+        url('../img/back-desktop-1x.webp') 1x,
+        url('../img/back-desktop-2x.jpg') 2x,
+        url('../img/back-desktop-2x.webp') 2x,
+        url('../img/back-desktop-3x.webp') 3x,
+        url('../img/back-desktop-3x.jpg') 3x
+    );
     @include tablet {
-      margin: 78px auto 91px;
+      padding-top: 77px;
+      padding-bottom: 91px;
+    }
+
+
+    &::after {
+      content: '';
+      background: url('../img/header-triangle.svg') center center/no-repeat;
+      height: 57px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__text-pic {
+    height: auto;
+    @include tablet {
       width: 461px;
       height: 350px;
     }
