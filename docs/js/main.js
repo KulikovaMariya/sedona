@@ -1,0 +1,1 @@
+(()=>{var e=document.querySelector(".js-burger"),t=document.querySelector(".js-shadow"),c=document.querySelector(".js-nav");e.addEventListener("click",(function(){e.classList.toggle("header__burger--active"),t.classList.toggle("shadow--active"),c.classList.toggle("header__nav--active")}))})();

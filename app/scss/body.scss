@@ -1,0 +1,5 @@
+body {
+  @include desktop {
+    background-color: $body-bg;
+  }
+}

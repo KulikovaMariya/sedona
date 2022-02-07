@@ -1,0 +1,24 @@
+$body-bg: #E7E5E5;
+
+//header
+
+$mobile-desktop-header-nav-item-bg: #81B3D2;
+$mobile-desktop-header-nav-item-active-bg: #5496BD;
+$mobile-desktop-header-nav-link-active-color: rgba(255, 255, 255, .3);
+$mobile-burger-color: #81B3D2;
+$mobile-burger-active-color: rgba($mobile-burger-color, .3);
+$mobile-burger-close-color: #FFFFFF;
+$mobile-burger-close-active-color: rgba($mobile-burger-close-color, .3);
+
+$desktop-header-nav-link-color: #000000;
+$desktop-header-nav-link-active-color: #766357;
+$desktop-header-nav-link-focus-color: rgba(0, 0, 0, .3);
+$desktop-header-nav-link-active-hover-color: #604E43;
+
+//fonts
+$basic-family: 'PT Sans', 'Arial', 'Helvetica', sans-serif;
+
+//screen width
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 576px;
