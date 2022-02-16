@@ -1,4 +1,5 @@
 $body-bg: #E7E5E5;
+$wrapper-background-color: #FFFFFF;
 
 //header
 
@@ -14,6 +15,16 @@ $desktop-header-nav-link-color: #000000;
 $desktop-header-nav-link-active-color: #766357;
 $desktop-header-nav-link-focus-color: rgba(0, 0, 0, .3);
 $desktop-header-nav-link-active-hover-color: #604E43;
+
+// city
+$city-text-font-color: #000000;
+$city-list-item-has-img-background-color: #81B3D2;
+$city-list-item-has-img-font-color: #FFFFFF;
+$city-list-item-background-color: #EEEEEE;
+$city-list-item-title-font-color: #000000;
+$city-list-item-text-font-color: #333333;
+$city-list-item-text-wrapper-border-color: #D6D6D6;
+$city-desc-list-background-color: #FFFFFF;
 
 //fonts
 $basic-family: 'PT Sans', 'Arial', 'Helvetica', sans-serif;

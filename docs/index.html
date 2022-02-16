@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css?t=1644407782869">
+    <link rel="stylesheet" href="css/main.css?t=1645033864751">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
     </nav>
     <a href="#" class="header__logo-link">
       <picture>
-        <source media="(min-width: 1024px)" srcset="img/icons/logo-desktop.svg" />
+        <source media="(min-width: 1200px)" srcset="img/icons/logo-desktop.svg" />
         <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg" />
         <img class="header__logo" src="img/icons/logo-mobile.svg" width="102" height="82" alt="Логотип сайта Sedona">
       </picture>
@@ -49,51 +49,73 @@
 
   <main>
   <section class="city">
-  <h2 class="city__title">Седона</h2>
-  <p> — небольшой городок в Аризоне,  заслуживающий большего!</p>
-  <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+  <div class="city__title-wrapper">
+    <h2 class="city__title">Седона</h2>
+    <span class="city__title-text"> - небольшой город в Аризоне, заслуживающий большего!</span>
+  </div>
+  <p class="city__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
   <ol class="city__list">
-    <li class="city__list-item">
-      <h3 class="city__list-item-title">Настоящий городок</h3>
-      <p class="city__list-item-text">Седона не атракцион для туристов, там течёт своя жизнь</p>
-      <img src="#" alt="Фотография дома в Седоне">
+    <li class="city__list-item city__list-item--has-img">
+      <div class="city__list-item-text-wrapper">
+        <h3 class="city__list-item-title">Настоящий городок</h3>
+        <p class="city__list-item-text">Седона не атракцион для туристов, там течёт своя жизнь</p>
+      </div>
+      <picture>
+        <source media="(max-width: 320px)" srcset="img/photo-city-mobile-1x.jpg 1x, img/photo-city-mobile-2x.jpg 2x, img/photo-city-mobile-3x.jpg 3x"/>
+        <source media="(max-width: 768px)" srcset="img/photo-city-tablet-1x.jpg 1x, img/photo-city-tablet-2x.jpg 2x, img/photo-city-tablet-3x.jpg 3x"/>
+        <source media="(max-width: 1200px)" srcset="img/photo-city-desktop-1x.jpg 1x, img/photo-city-desktop-2x.jpg 2x, img/photo-city-desktop-3x.jpg 3x"/>
+        <img class="city__list-item-img" src="img/photo-city-mobile-1x.jpg" alt="Фотография дома в Седоне" width="320" height="260">
+      </picture>
       <dl class="city__desc-list">
         <div class="city__desc-list-item">
           <dt class="city__desc-term">Жилье</dt>
           <dd class="city__desc-definition">
-            <p class="city__desc-definition-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-          </dd>
-        </div>
-        <div class="city__desc-list-item">
-          <dt class="city__desc-term">Еда</dt>
-          <dd class="city__desc-definition">
-            <p class="city__desc-definition-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            Рекомендуем пожить в настоящем мотеле, все как в кино!
           </dd>
         </div>
         <div class="city__desc-list-item">
           <dt class="city__desc-term">Сувениры</dt>
           <dd class="city__desc-definition">
-            <p class="city__desc-definition-text">Не только китайского, но иместного производства!</p>
+            Не только китайского, но иместного производства!
+          </dd>
+        </div>
+        <div class="city__desc-list-item">
+          <dt class="city__desc-term">Еда</dt>
+          <dd class="city__desc-definition">
+            Всегда заказывайте фирменный бургер, вы не разочаруетесь!
           </dd>
         </div>
       </dl>
     </li>
-    <li class="city__list-item">
-      <h3 class="city__list-item-title">Там есть мост дьявола</h3>
-      <p class="city__list-item-text">Да, по нему можно пройтись! Если вы осмелитесь, конечно</p>
-      <img src="#" alt="Фотография каньона">
+    <li class="city__list-item city__list-item--has-img">
+      <div class="city__list-item-text-wrapper">
+        <h3 class="city__list-item-title">Там есть мост дьявола</h3>
+        <p class="city__list-item-text">Да, по нему можно пройтись! Если вы осмелитесь, конечно</p>
+      </div>
+      <picture>
+        <source media="(max-width: 320px)" srcset="img/photo-bridge-mobile-1x.jpg 1x, img/photo-bridge-mobile-2x.jpg 2x, img/photo-bridge-mobile-3x.jpg 3x"/>
+        <source media="(max-width: 768px)" srcset="img/photo-bridge-tablet-1x.jpg 1x, img/photo-bridge-tablet-2x.jpg 2x, img/photo-bridge-tablet-3x.jpg 3x"/>
+        <source media="(max-width: 1200px)" srcset="img/photo-bridge-desktop-1x.jpg 1x, img/photo-bridge-desktop-2x.jpg 2x, img/photo-bridge-desktop-3x.jpg 3x"/>
+        <img class="city__list-item-img" src="img/photo-bridge-mobile-1x.jpg" alt="Фотография мост дьявола" width="320" height="260">
+      </picture>
     </li>
     <li class="city__list-item">
-      <h3 class="city__list-item-title">Небольшая площадь</h3>
-      <p class="city__list-item-text">Все интересные места находятся очень близко</p>
+      <div class="city__list-item-text-wrapper">
+        <h3 class="city__list-item-title">Небольшая площадь</h3>
+        <p class="city__list-item-text">Все интересные места находятся очень близко</p>
+      </div>
     </li>
     <li class="city__list-item">
-      <h3 class="city__list-item-title">Красивая дорога</h3>
-      <p class="city__list-item-text">Ехать в Седону из Лас-Вегаса совсемне скучно!</p>
+      <div class="city__list-item-text-wrapper">
+        <h3 class="city__list-item-title">Красивая дорога</h3>
+        <p class="city__list-item-text">Ехать в Седону из Лас-Вегаса совсемне скучно!</p>
+      </div>
     </li>
     <li class="city__list-item">
-      <h3 class="city__list-item-title">Мало туристов</h3>
-      <p class="city__list-item-text">Большинство едет в Гранд Каньон и толпится там</p>
+      <div class="city__list-item-text-wrapper">
+        <h3 class="city__list-item-title">Мало туристов</h3>
+        <p class="city__list-item-text">Большинство едет в Гранд Каньон и толпится там</p>
+      </div>
     </li>
   </ol>
 </section>
@@ -101,7 +123,7 @@
 </div>
 </div>
       <div class="shadow js-shadow"></div>
-    <script src="js/main.js?t=1644407782869"></script>
+    <script src="js/main.js?t=1645033864751"></script>
 </body>
 
 </html>

@@ -1,0 +1,129 @@
+.city {
+
+  &__title-wrapper {
+    text-align: center;
+    padding: 32px 25px 12px 27px;
+  }
+
+  &__title {
+    font-family: $basic-family;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    display: inline;
+    text-transform: uppercase;
+    color: $city-text-font-color;
+  }
+
+  &__title-text {
+    font-family: $basic-family;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline;
+    color: $city-text-font-color;
+  }
+
+  &__text {
+    padding: 12px 25px 27px;
+    font-family: $basic-family;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $city-text-font-color;
+  }
+
+  &__list {
+    position: relative;
+    list-style-type: none;
+    counter-reset: num;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 36px;
+      background: url('../img/arrow-decor.svg') center center/no-repeat;
+    }
+  }
+
+  &__list-item {
+    background-color: $city-list-item-background-color;
+    padding-left: 20px;
+    padding-right: 20px;
+    //&::before {
+    //  content: '-#{@counter(num)}-';
+    //  counter-increment: num;
+    //}
+  }
+
+  .city__list-item-text-wrapper {
+    padding-top: 25px;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+
+  &__list-item:nth-child(4) .city__list-item-text-wrapper {
+    border-top: 1px solid $city-list-item-text-wrapper-border-color;
+    border-bottom: 1px solid $city-list-item-text-wrapper-border-color;
+  }
+
+  &__list-item-title {
+    margin-bottom: 50px;
+  }
+
+  &__desc-list {
+    background-color: $city-desc-list-background-color;
+    padding: 9px 0;
+  }
+
+  &__desc-list-item {
+    padding: 26px 21px 26px 70px;
+  }
+
+  &__desc-term {
+    margin-bottom: 16px;
+  }
+
+  &__list-item-title,
+  &__desc-term {
+    font-family: $basic-family;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $city-list-item-title-font-color;
+  }
+
+  &__list-item-text,
+  &__desc-definition{
+    font-family: $basic-family;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $city-list-item-text-font-color;
+  }
+
+  &__list-item--has-img {
+    background-color: $city-list-item-has-img-background-color;
+    padding: 0;
+  }
+
+  &__list-item--has-img:first-child .city__list-item-text-wrapper {
+    padding-top: 58px;
+  }
+
+  &__list-item--has-img .city__list-item-text-wrapper {
+    padding-top: 39px;
+    padding-bottom: 35px;
+  }
+
+  &__list-item--has-img .city__list-item-title,
+  &__list-item--has-img .city__list-item-text{
+    color:$city-list-item-has-img-font-color;
+  }
+}

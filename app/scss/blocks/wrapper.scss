@@ -1,5 +1,6 @@
 .wrapper {
   @include desktop {
     box-shadow: 0 0 17px 0 rgba(0, 0, 0, .1);
+    background-color: $wrapper-background-color;
   }
 }
