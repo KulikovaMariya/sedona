@@ -179,6 +179,12 @@
   &__list-item--has-img .city__list-item-text-wrapper {
     padding-top: 39px;
     padding-bottom: 35px;
+    @include tablet {
+      max-width: 256px;
+    }
+    @include desktop {
+      max-width: 400px;
+    }
   }
 
   &__list-item--has-img .city__list-item-title,
