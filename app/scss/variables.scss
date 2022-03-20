@@ -1,8 +1,16 @@
+//body
 $body-bg: #E7E5E5;
 $wrapper-background-color: #FFFFFF;
 
-//header
+//fonts
+$basic-family: 'PT Sans', 'Arial', 'Helvetica', sans-serif;
 
+//screen width
+$desktop: 1200px;
+$tablet: 768px;
+$mobile: 576px;
+
+//header
 $mobile-desktop-header-nav-item-bg: #81B3D2;
 $mobile-desktop-header-nav-item-active-bg: #5496BD;
 $mobile-desktop-header-nav-link-active-color: rgba(255, 255, 255, .3);
@@ -23,13 +31,16 @@ $city-list-item-has-img-font-color: #FFFFFF;
 $city-list-item-background-color: #EEEEEE;
 $city-list-item-title-font-color: #000000;
 $city-list-item-text-font-color: #333333;
-$city-list-item-text-wrapper-border-color: #D6D6D6;
+$city-item-pseudo-background-color: #D6D6D6;
 $city-desc-list-background-color: #FFFFFF;
 
-//fonts
-$basic-family: 'PT Sans', 'Arial', 'Helvetica', sans-serif;
+//about
+$about-img-background-color: #81B3D2;
+$about-img-font-color: #FFFFFF;
+$about-title-font-color: #000000;
+$about-text-font-color: #333333;
+$about-background-color: #EEEEEE;
 
-//screen width
-$desktop: 1200px;
-$tablet: 768px;
-$mobile: 576px;
+//promo
+$promo-descr-font-color: #000000;
+$promo-text-font-color: #333333;

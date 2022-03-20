@@ -1,0 +1,133 @@
+.city {
+
+  &__header {
+    text-align: center;
+    padding: 32px 25px 12px 27px;
+    @include tablet {
+      padding-left: 144px;
+      padding-right: 124px;
+    }
+  }
+
+  &__title {
+    font-family: $basic-family;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    display: inline;
+    text-transform: uppercase;
+    color: $city-text-font-color;
+    @include tablet {
+      font-size: 21px;
+    }
+  }
+
+  &__title-text {
+    font-family: $basic-family;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline;
+    color: $city-text-font-color;
+    @include tablet {
+      font-size: 21px;
+    }
+  }
+
+  &__text {
+    padding: 12px 25px 27px;
+    font-family: $basic-family;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $city-text-font-color;
+  }
+
+  &__container {
+    position: relative;
+    list-style-type: none;
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 36px;
+      background: url('../img/arrow-decor.svg') center center/no-repeat;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__item:nth-child(3),
+  &__item:nth-child(4),
+  &__item:nth-child(5) {
+    @include tablet {
+      width: 33.33%;
+    }
+  }
+
+  &__item:first-child {
+    padding-top: 20px;
+  }
+
+  &__item:nth-child(4) {
+    position: relative;
+    &::before {
+      content: '';
+      height: 1px;
+      background-color: $city-item-pseudo-background-color;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      right: 20px;
+      @include tablet {
+        display: none;
+      }
+    }
+    &::after {
+      content: '';
+      height: 1px;
+      background-color: $city-item-pseudo-background-color;
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__promo-list {
+    padding: 22px 0;
+  }
+
+  &__desc-list-item-icon {
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    @include tablet {
+      width: 75px;
+      height: 75px;
+      top: 60px;
+      left: calc(50% - 35px);
+    }
+  }
+
+  &__promo-list {
+    list-style-type: none;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
