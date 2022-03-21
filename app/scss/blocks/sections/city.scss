@@ -6,6 +6,7 @@
     @include tablet {
       padding-left: 144px;
       padding-right: 124px;
+      padding-bottom: 40px;
     }
   }
 
@@ -36,7 +37,7 @@
   }
 
   &__text {
-    padding: 12px 25px 27px;
+    padding: 12px 25px 7px;
     font-family: $basic-family;
     font-size: 14px;
     line-height: 26px;
@@ -75,7 +76,12 @@
   }
 
   &__item:first-child {
-    padding-top: 20px;
+    .about--img {
+      padding-top: 20px;
+      @include tablet {
+        padding-top: 0;
+      }
+    }
   }
 
   &__item:nth-child(4) {

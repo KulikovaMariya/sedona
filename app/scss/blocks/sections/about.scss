@@ -63,10 +63,9 @@
   }
 
   &--img .about__descr {
-    height: 191px;
-    padding: 35px 12px;
+    padding: 38px 12px;
     @include tablet {
-      height: 256px;
+      height: 100%;
       padding: 40px 53px;
     }
   }
