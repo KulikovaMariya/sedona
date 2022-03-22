@@ -1,0 +1,96 @@
+.about {
+  display: block;
+  background-color: $about-background-color;
+
+  &--img {
+    background-color: $about-img-background-color;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  &--reverse {
+    @include tablet {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  &--reverse .about__pic {
+    @include tablet {
+      order: -1;
+    }
+  }
+
+  &__descr {
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablet {
+      height: 256px;
+      padding: 40px 50px;
+    }
+  }
+
+  &__title {
+    font-family: $basic-family;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $about-title-font-color;
+    @include tablet {
+      font-size: 21px;
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  &__text,
+  &__number {
+    font-family: $basic-family;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: $about-text-font-color;
+  }
+
+  &--img .about__descr {
+    padding: 38px 12px;
+    @include tablet {
+      height: 100%;
+      padding: 40px 53px;
+    }
+  }
+
+  &--img .about__title,
+  &--img .about__text,
+  &--img .about__number{
+    color: $about-img-font-color;
+  }
+
+  &__pic {
+    display: none;
+  }
+
+  &--img .about__pic {
+    display: block;
+  }
+
+  &--img .about__img {
+    display: block;
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+    @include tablet {
+      height: 100%;
+    }
+  }
+}

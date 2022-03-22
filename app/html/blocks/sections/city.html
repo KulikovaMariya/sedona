@@ -1,0 +1,84 @@
+<section class="city">
+  <div class="city__header">
+    <h2 class="city__title">Седона</h2>
+    <span class="city__title-text"> - небольшой город в Аризоне, заслуживающий большего!</span>
+    <p class="city__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+  </div>
+  <ul class="city__container">
+    <li class="city__item">
+      @@include('about.html', {
+      "class": "about--img",
+      "title": "Настоящий городок",
+      "number": "&mdash; №1 &mdash;",
+      "text": "Седона не атракцион для туристов, там течет своя жизнь",
+      "srcset-1200px": "img/photo-city-desktop-1x.webp 1x, img/photo-city-desktop-3x.webp 3x",
+      "srcset-768px": "img/photo-city-tablet-1x.webp 1x, img/photo-city-tablet-3x.webp 3x",
+      "srcset-320px": "img/photo-city-mobile-1x.webp 1x, img/photo-city-mobile-3x.webp 3x",
+      "img-src": "img/photo-city-tablet-1x.jpg",
+      "img-srcset": "img/photo-city-tablet-3x.jpg 3x",
+      "img-alt": "Фотография дома в Седоне",
+      })
+      <ul class="city__promo-list">
+        <li class="city__promo-item">
+          @@include('promo.html', {
+          "descr": "Жильё",
+          "pic-src": "img/icons/icon-house.svg",
+          "pic-alt": "Изображение домика",
+          "definition": "Рекомендуем пожить в настоящем мотеле, всё как в кино!"
+          })
+        </li>
+        <li class="city__promo-item">
+          @@include('promo.html', {
+          "descr": "Сувениры",
+          "pic-src": "img/icons/icon-gift.svg",
+          "pic-alt": "Изображение домика",
+          "definition": "Не только китайского, но и местного производства!"
+          })
+        </li>
+        <li class="city__promo-item">
+          @@include('promo.html', {
+          "descr": "Еда",
+          "pic-src": "img/icons/icon-burger.svg",
+          "pic-alt": "Изображение бургера",
+          "definition": "Всегда заказывайте фирменный бургер, вы неразочаруетесь!"
+          })
+        </li>
+      </ul>
+    </li>
+    <li class="city__item">
+      @@include('about.html', {
+      "class": "about--reverse about--img",
+      "title": "Там есть мост дьявола",
+      "number": "&mdash; №2 &mdash;",
+      "text": "Да, по нему можно пройтись! Если вы осмелитесь, конечно",
+      "srcset-1200px": "img/photo-bridge-desktop-1x.webp 1x, img/photo-bridge-desktop-3x.webp 3x",
+      "srcset-768px": "img/photo-bridge-tablet-1x.webp 1x, img/photo-bridge-tablet-3x.webp 3x",
+      "srcset-320px": "img/photo-bridge-mobile-1x.webp 1x, img/photo-bridge-mobile-3x.webp 3x",
+      "img-src": "img/photo-bridge-tablet-1x.jpg",
+      "img-srcset": "img/photo-bridge-tablet-3x.jpg 3x",
+      "img-alt": "Фотография мост дьявола",
+      })
+    </li>
+    <li class="city__item">
+      @@include('about.html', {
+      "title": "Небольшая площадь",
+      "number": "&mdash; №3 &mdash;",
+      "text": "Все интересные места находятся очень близко",
+      })
+    </li>
+    <li class="city__item">
+      @@include('about.html', {
+      "title": "Красивая дорога",
+      "number": "&mdash; №4 &mdash;",
+      "text": "Ехать в Седону из Лас-Вегаса совсемне скучно!",
+      })
+    </li>
+    <li class="city__item">
+      @@include('about.html', {
+      "title": "Мало туристов",
+      "number": "&mdash; №5 &mdash;",
+      "text": "Большинство едет в Гранд Каньон и толпится там",
+      })
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,45 @@
+.promo {
+  position: relative;
+  padding: 13px 20px 13px 70px;
+  @include tablet {
+    padding: 135px 50px 39px 50px;
+  }
+
+  &__descr {
+    font-family: $basic-family;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $promo-descr-font-color;
+    @include tablet {
+      font-size: 21px;
+      text-align: center;
+    }
+  }
+
+  &__pic {
+    position: absolute;
+    left: 20px;
+    top: 13px;
+    @include tablet {
+      height: 75px;
+      width: 75px;
+      left: calc(50% - 37px);
+      top: 40px;
+    }
+  }
+
+  &__definition {
+    font-family: $basic-family;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $promo-text-font-color;
+    @include tablet {
+      text-align: center;
+    }
+  }
+}
