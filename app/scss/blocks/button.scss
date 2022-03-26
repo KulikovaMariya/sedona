@@ -1,5 +1,32 @@
 .button {
   border: 0;
   cursor: pointer;
+  display: block;
+  background-color: $button-bg-color;
+  text-decoration: none;
+  font-family: $basic-family;
+  font-size: 21px;
+  line-height: 58px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $button-font-color;
+  text-align: center;
+  outline: 0;
+  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
 
+  &:active,
+  &._active{
+    background-color: $button-active-bg-color;
+    color: $button-active-font-color;
+  }
+
+  &._disabled {
+    background-color: $button-disabled-bg-color;
+  }
+
+  @include tablet {
+    &:hover {
+      background-color: $button-hover-bg-color;
+    }
+  }
 }

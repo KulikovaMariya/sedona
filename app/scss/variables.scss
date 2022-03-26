@@ -10,6 +10,14 @@ $desktop: 1200px;
 $tablet: 768px;
 $mobile: 576px;
 
+//button
+$button-bg-color: #81B3D2;
+$button-hover-bg-color: #669EC0;
+$button-disabled-bg-color: #E5E5E5;
+$button-active-bg-color: #5496BD;
+$button-font-color: #FFFFFF;
+$button-active-font-color: rgba(#FFFFFF, 0.3);
+
 //header
 $mobile-desktop-header-nav-item-bg: #81B3D2;
 $mobile-desktop-header-nav-item-active-bg: #5496BD;
@@ -44,3 +52,7 @@ $about-background-color: #EEEEEE;
 //promo
 $promo-descr-font-color: #000000;
 $promo-text-font-color: #333333;
+
+//booking
+$booking-title-font-color: #000000;
+$booking-text-font-color: #333333;
