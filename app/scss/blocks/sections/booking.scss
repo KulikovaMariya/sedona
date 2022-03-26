@@ -1,4 +1,5 @@
 .booking {
+  position: relative;
 
   &__container {
     padding: 33px 20px 49px 20px;
@@ -41,8 +42,15 @@
     }
   }
 
-  &__button {
-
+  &__pointer {
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    background-color: $booking-pointer-bg-color;
+    border: 5px solid $booking-pointer-border-color;
+    position: absolute;
+    bottom: 161px;
+    left: 50%;
   }
 
   &__img {
