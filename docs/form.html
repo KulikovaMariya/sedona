@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css?t=1649621493496">
+  <title>Sedona / Форма отзыва</title>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <header class="header">
+  <div class="header__top">
+    <nav class="header__nav js-nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">Главная</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">Фотои видео</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="../form.html" class="header__nav-link">Форма отзыва</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="https://htmlacademy.ru/" class="header__nav-link">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="#" class="header__logo-link">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/icons/logo-desktop.svg" />
+        <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg" />
+        <img class="header__logo" src="img/icons/logo-mobile.svg" width="102" height="82" alt="Логотип сайта Sedona">
+      </picture>
+    </a>
+    <button type="button" aria-label="Открыть меню" class="header__burger js-burger">
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+      <span class="header__burger-line"></span>
+    </button>
+  </div>
+  <div class="header__main">
+    <img class="header__text-pic" width="282" height="209" src="img/sedona.svg" alt="текст на картинке: добро пожаловать в величественную Седону">
+  </div>
+</header>
+
+      <main>
+        <section class="form">
+          <div class="form__header">
+            <h2 class="form__title">Оставьте свой отзыв</h2>
+            <p class="form__text">Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях.</p>
+          </div>
+          <form action="#" class="form__container">
+            <section class="form__section">
+              <h3 class="form__sub-title">Представьтесь:</h3>
+              <label class="text-input">
+                Имя*:
+                <input class="text-input__input" name="name" type="text" placeholder="Пётр">
+              </label>
+              <label class="text-input">
+                Фамилия*:
+                <input class="text-input__input" name="surname" type="text" placeholder="Иванов">
+              </label>
+              <label class="text-input">
+                Отчество*:
+                <input class="text-input__input" name="patronymic" type="text" placeholder="Александрович">
+              </label>
+            </section>
+            <section class="form__section">
+              <h3 class="form__sub-title">Контактная информация:</h3>
+            </section>
+            <section class="form__section">
+              <h3 class="form__sub-title">Ваше общее впечатление:</h3>
+              <label class="radio">
+                <input class="radio__input" value="positive" name="review" type="radio">
+                <span class="radio__pseudo"></span>
+                Скорее положительное
+              </label>
+              <label class="radio">
+                <input class="radio__input" value="negative" name="review" type="radio">
+                <span class="radio__pseudo"></span>
+                Скорее отрицательное
+              </label>
+              <label class="radio">
+                <input class="radio__input" value="none" name="review" type="radio">
+                <span class="radio__pseudo"></span>
+                Затрудняюсь ответить
+              </label>
+            </section>
+            <section class="form__section">
+              <h3 class="form__sub-title">Посещенные достопримечательности:</h3>
+            </section>
+            <section class="form__section">
+              <h3 class="form__sub-title">Опишите свои эмоции:</h3>
+            </section>
+            <input type="submit" class="button form__button" value="Отправить отзыв"/>
+          </form>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

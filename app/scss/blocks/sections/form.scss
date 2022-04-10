@@ -1,0 +1,72 @@
+.form {
+
+  &__header {
+    text-align: center;
+    padding: 15px;
+    margin-top: 26px;
+    @include tablet {
+      //padding-left: 144px;
+      //padding-right: 124px;
+      //padding-bottom: 40px;
+    }
+  }
+
+  &__title {
+    font-family: $basic-family;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    display: inline;
+    text-transform: uppercase;
+    color: $form-text-font-color;
+    @include tablet {
+      font-size: 21px;
+    }
+  }
+
+  &__text {
+    //padding: 12px 25px 7px;
+    margin-top: 26px;
+    font-family: $basic-family;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $form-title-font-color;
+  }
+
+  &__container {
+
+    @include tablet {
+
+    }
+
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px 20px 20px 25px;
+    &::after {
+      content: '';
+      height: 1px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: $form-border-color;
+    }
+  }
+
+  &__sub-title {
+    font-family: $basic-family;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

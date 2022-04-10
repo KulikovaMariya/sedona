@@ -1,0 +1,30 @@
+.text-input {
+  font-family: $basic-family;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: $text-input-label-font-color;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  //margin-right: 15px
+
+  &__input {
+    height: 58px;
+    padding: 16px 21px;
+    border: none;
+    outline: none;
+    background-color: $text-input-bg-color;
+    width: 100%;
+    margin-left: 10px;
+    font-family: $basic-family;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $text-input-font-color;
+    &::placeholder {
+      color: $text-input-font-color;
+    }
+  }
+}
