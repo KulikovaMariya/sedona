@@ -8,7 +8,6 @@
   align-items: center;
   width: 100%;
   margin: 10px 0;
-  //margin-right: 15px
 
   &__input {
     height: 58px;
@@ -23,8 +22,18 @@
     line-height: 26px;
     font-weight: bold;
     color: $text-input-font-color;
+    transition: background-color 0.3s ease;
     &::placeholder {
       color: $text-input-font-color;
+    }
+    &:focus {
+      background-color: $text-input-focus-bg-color;
+      border: 4px solid $text-input-focus-border-color;
+    }
+    @include tablet {
+      &:hover {
+      background-color: $text-input-hover-bg-color;
+      }
     }
   }
 }

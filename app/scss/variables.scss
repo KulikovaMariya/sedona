@@ -18,14 +18,25 @@ $button-active-bg-color: #5496BD;
 $button-font-color: #FFFFFF;
 $button-active-font-color: rgba(#FFFFFF, 0.3);
 
-//checkbox
+//radio
 $radio-btn-bg-color: #F2F2F2;
 $radio-after-bg-color: #333333;
+$radio-btn-hover-bg-color: #E5E5E5;
+$radio-btn-active-bg-color: #D5D5D5;
+$radio-after-active-bg-color: rgba(#333333, 0.3);
+
+//checkbox
+$checkbox-bg-color: #F2F2F2;
+$checkbox-active-bg-color: #D5D5D5;
+$checkbox-hover-bg-color: #E5E5E5;
 
 //input
 $text-input-label-font-color: #333333;
 $text-input-bg-color: #F2F2F2;
 $text-input-font-color: #000000;
+$text-input-hover-bg-color: #E5E5E5;
+$text-input-focus-border-color: #E5E5E5;
+$text-input-focus-bg-color: #FFFFFF;
 
 //header
 $mobile-desktop-header-nav-item-bg: #81B3D2;

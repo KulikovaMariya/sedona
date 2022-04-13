@@ -1,4 +1,4 @@
-.radio {
+.checkbox {
   display: flex;
   align-items: center;
   font-family: $basic-family;
@@ -6,55 +6,42 @@
   line-height: 26px;
   font-weight: bold;
 
+
   &__input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
     position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    white-space: nowrap;
-    border: 0;
   }
 
   &__pseudo {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $radio-btn-bg-color;
-    margin-right: 26px;
+    height: 58px;
+    width: 58px;
+    border-radius: 8px;
+    background-color: $checkbox-bg-color;
+    margin-right: 28px;
     margin-top: 10px;
     margin-bottom: 10px;
-    @include tablet {
-      margin-right: 23px;
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
-    &:after {
-      content: "";
-      width: 18px;
-      height: 18px;
-      background-color: $radio-after-bg-color;
-      border-radius: 50%;
-      transition: opacity 0.2s, transform 0.2s;
-      transform: scale(0);
-      opacity: 0;
+    transition: background-color .3s ease, background-image .3s ease;
+  }
+
+  @include tablet {
+    &:hover .checkbox__pseudo {
+      background-color: $checkbox-hover-bg-color;
     }
   }
 
-  :checked ~ .radio__pseudo:after {
-    transform: scale(1);
-    opacity: 1;
+  &__input:active + .checkbox__pseudo,
+  &__input._active + .checkbox__pseudo {
+    background-color: $checkbox-active-bg-color;
+    background-image: url('../img/icons/checked-active.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
-  &:focus ~ .radio__pseudo {
-    box-shadow: 0 0 4px 0 green;
+  &__input:checked + .checkbox__pseudo {
+    background-image: url('../img/icons/checked.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
-
-
-
